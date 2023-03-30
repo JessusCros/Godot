@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqwmklw46i3cl"]
+
+[ext_resource type="Script" path="res://Node3D.gd" id="1_6641y"]
+[ext_resource type="MeshLibrary" uid="uid://biqgydqfnsa77" path="res://NewMesh.tres" id="2_iwyek"]
+[ext_resource type="Script" path="res://GridMap.gd" id="3_g261u"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_6641y")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("2_iwyek")
+data = {
+"cells": PackedInt32Array(1, 65535, 0, 65526, 14, 0, 43, 65496, 0, 65497, 7, 0, 27, 14, 0, 18, 18, 0, 65517, 65423, 0)
+}
+script = ExtResource("3_g261u")
+Lenght = 100
+Width = 100
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.467097, 0.884206, 0, -0.884206, -0.467097, 0, 102.903, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.247405, 0, -0.968912, 0, 1, 0, 0.968912, 0, -0.247405, 4.2695, 33.9409, 73.5394)
